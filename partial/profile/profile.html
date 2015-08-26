@@ -1,0 +1,19 @@
+<div class="col-md-12" ng-controller="ProfileCtrl">
+	<button ng-click="logout()" class="btn btn-danger pull-right" type="button">Logout</button>
+<table class="table">
+    <thead>
+      <tr>
+        <th>Full Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ profile.fullName }}</td>
+        <td>{{ profile.email }}</td>
+
+      </tr>
+    </tbody>
+  </table>
+
+</div>
