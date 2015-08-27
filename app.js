@@ -1,10 +1,10 @@
-angular.module('demo', ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 'validation', 'validation.rule', 'LocalStorageModule']);
+angular.module('demo', ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 'validation', 'validation.rule', 'LocalStorageModule','angular-growl']);
 
-angular.module('demo').config(function($stateProvider, $urlRouterProvider, localStorageServiceProvider) {
+angular.module('demo').config(function($stateProvider, $urlRouterProvider, localStorageServiceProvider,growlProvider) {
 
 
     localStorageServiceProvider.setPrefix('demo');
-
+growlProvider.globalTimeToLive(2000);
 
     $stateProvider.state('register', {
         url: '/register',

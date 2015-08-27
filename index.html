@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
   <link href="app.less" type="text/css" rel="stylesheet/less">
+  <link href="bower_components/angular-growl-2/build/angular-growl.css" type="text/css" rel="stylesheet/less">
   <!-- <link href="app.less" type="text/css" rel="stylesheet/less"> -->
 </head>
 <body>
@@ -27,6 +28,7 @@
   <script src="bower_components/angular-validation/dist/angular-validation.js"></script>
   <script src="bower_components/angular-validation/dist/angular-validation-rule.js"></script>
   <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+  <script src="bower_components/angular-growl-2/build/angular-growl.js"></script>
   <!-- Add New Bower Component JS Above -->
 
 
@@ -43,9 +45,10 @@
         <div ui-view>
           
         </div>
+        
       </div>
     </div>
   </div>
-
+<div growl></div>
 </body>
 </html>

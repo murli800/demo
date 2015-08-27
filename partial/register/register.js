@@ -1,4 +1,4 @@
-angular.module('demo').controller('RegisterCtrl', function($scope,localStorageService) {
+angular.module('demo').controller('RegisterCtrl', function($scope,localStorageService,growl) {
 
 	$scope.form = {};
 	$scope.submitForm = function(formValid) {
@@ -9,9 +9,12 @@ angular.module('demo').controller('RegisterCtrl', function($scope,localStorageSe
 			angular.forEach($scope.form, function(value, key) {
 				
 			 localStorageService.set(key, value);
+			  growl.success("Registration successful. Now you can login");
 			});
 
 		} else {
+			 growl.error("All fieds are required");
+
 			console.log('not valide');
 		}
 	};
