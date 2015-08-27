@@ -9,7 +9,7 @@ angular.module('demo').controller('ProfileCtrl', function($scope, localStorageSe
 
 	$scope.logout = function() {
 		console.log('logout');
-		localStorageService.clearAll();
+		// localStorageService.clearAll();
 		localStorageService.set('loggedIn',false);
 
 		$location.path('/login');
